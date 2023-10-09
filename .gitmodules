@@ -1,3 +1,6 @@
 [submodule "lstm/lstm_from_scrach/lstm"]
 	path = lstm/lstm_from_scrach/lstm
 	url = git@github.com:modelsplaid/lstm.git
+[submodule "rnn/RNN-Implementation-using-NumPy"]
+	path = rnn/RNN-Implementation-using-NumPy
+	url = git@github.com:modelsplaid/RNN-Implementation-using-NumPy.git
