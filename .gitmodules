@@ -4,3 +4,6 @@
 [submodule "rnn/RNN-Implementation-using-NumPy"]
 	path = rnn/RNN-Implementation-using-NumPy
 	url = git@github.com:modelsplaid/RNN-Implementation-using-NumPy.git
+[submodule "thirdparty/pytorch-tutorials"]
+	path = thirdparty/pytorch-tutorials
+	url = git@github.com:modelsplaid/pytorch-tutorials.git
