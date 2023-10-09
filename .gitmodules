@@ -1,0 +1,3 @@
+[submodule "lstm/lstm_from_scrach/lstm"]
+	path = lstm/lstm_from_scrach/lstm
+	url = git@github.com:modelsplaid/lstm.git
