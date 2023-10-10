@@ -1,0 +1,14 @@
+Collecting pytorchcv
+  Downloading pytorchcv-0.0.67-py2.py3-none-any.whl (532 kB)
+Requirement already satisfied: torch in /home/a/.local/lib/python3.8/site-packages (2.0.1+cpu)
+Requirement already satisfied: numpy in /home/a/.local/lib/python3.8/site-packages (from pytorchcv) (1.19.5)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from pytorchcv) (2.22.0)
+Requirement already satisfied: filelock in /home/a/.local/lib/python3.8/site-packages (from torch) (3.9.0)
+Requirement already satisfied: networkx in /home/a/.local/lib/python3.8/site-packages (from torch) (3.0)
+Requirement already satisfied: jinja2 in /home/a/.local/lib/python3.8/site-packages (from torch) (3.1.2)
+Requirement already satisfied: typing-extensions in /home/a/.local/lib/python3.8/site-packages (from torch) (4.4.0)
+Requirement already satisfied: sympy in /home/a/.local/lib/python3.8/site-packages (from torch) (1.11.1)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/a/.local/lib/python3.8/site-packages (from jinja2->torch) (2.1.2)
+Requirement already satisfied: mpmath>=0.19 in /home/a/.local/lib/python3.8/site-packages (from sympy->torch) (1.2.1)
+Installing collected packages: pytorchcv
+Successfully installed pytorchcv-0.0.67
