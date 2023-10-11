@@ -45,8 +45,8 @@ class NeuralNetwork(nn.Module):
 model = NeuralNetwork()
 
 learning_rate = 1e-3
-batch_size = 64
-epochs = 5
+batch_size    = 64
+epochs        = 5
 
 # Initialize the loss function
 loss_fn = nn.CrossEntropyLoss()
@@ -63,7 +63,7 @@ def train_loop(dataloader, model, loss_fn, optimizer):
         
         # Backpropagation
         optimizer.zero_grad()
-        loss.backward()
+        loss.backward ()
         optimizer.step()
 
         if batch % 100 == 0:
