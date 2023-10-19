@@ -4,7 +4,7 @@ t2 = time.time()
 
 import torch
 
-x = torch.ones(5)  # input tensor
+x = torch.ones (5)   # input tensor
 y = torch.zeros(3)  # expected output
 w = torch.randn(5, 3, requires_grad=True)
 b = torch.randn(3, requires_grad=True)
@@ -14,4 +14,4 @@ loss.backward()
 print(w.grad)
 print(b.grad)
 t1 = time.time()
-print((t1-t2)*1000)
+print((t1-t2)*1000)                                    
