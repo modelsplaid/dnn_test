@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#tfboard
+runs/
 # C extensions
 *.so
 
