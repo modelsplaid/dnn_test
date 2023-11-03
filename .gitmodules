@@ -7,3 +7,6 @@
 [submodule "thirdparty/pytorch-tutorials"]
 	path = thirdparty/pytorch-tutorials
 	url = git@github.com:modelsplaid/pytorch-tutorials.git
+[submodule "thirdparty/transformer-from-scrach"]
+	path = thirdparty/transformer-from-scrach
+	url = git@github.com:modelsplaid/transformer-from-scrach.git
