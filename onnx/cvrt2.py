@@ -51,8 +51,6 @@ torch_model.load_state_dict(model_zoo.load_url(model_url, map_location=map_locat
 # set the model to inference mode
 torch_model.eval()
 
-
-
 # Input to the model
 x = torch.randn(batch_size, 1, 224, 224, requires_grad=True)
 torch_out = torch_model(x)
