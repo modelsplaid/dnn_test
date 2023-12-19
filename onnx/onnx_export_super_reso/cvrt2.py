@@ -9,7 +9,6 @@ import torch.onnx
 import torch.nn as nn
 import torch.nn.init as init
 
-
 class SuperResolutionNet(nn.Module):
     def __init__(self, upscale_factor, inplace=False):
         super(SuperResolutionNet, self).__init__()
