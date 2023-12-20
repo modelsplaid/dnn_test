@@ -4,7 +4,7 @@ import numpy as np
 from torch import nn
 import torch.utils.model_zoo as model_zoo
 import torch.onnx
-
+import onnxruntime
 # Super Resolution model definition in PyTorch
 import torch.nn as nn
 import torch.nn.init as init
@@ -68,4 +68,19 @@ torch.onnx.export(
     dynamic_axes       = {'input' : {0 : 'batch_size'},    # variable length axes
                           'output': {0 : 'batch_size'}})
 
+### inference
 
+batch_size = 1
+ort_session = onnxruntime.InferenceSession("../../data/super_resolution.onnx", providers=["CPUExecutionProvider"])
+def to_numpy(tensor):
+    return tensor.detach().cpu().numpy() if tensor.requires_grad else tensor.cpu().numpy()
+# compute ONNX Runtime output prediction
+ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(x)}
+ort_outs = ort_session.run(None, ort_inputs)
+
+print("Done compute ONNX Runtime output prediction!")
+
+
+# compare ONNX Runtime and PyTorch results
+np.testing.assert_allclose(to_numpy(torch_out), ort_outs[0], rtol=1e-03, atol=1e-05)
+print("Exported model has been tested with ONNXRuntime, and the result looks good!")
