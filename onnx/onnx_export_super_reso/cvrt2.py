@@ -107,10 +107,10 @@ img_y = to_tensor(img_y)
 img_y.unsqueeze_(0)
 
 ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(img_y)}
-ort_outs = ort_session.run(None, ort_inputs)
-img_out_y = ort_outs[0]
+ort_outs   = ort_session.run(None, ort_inputs)
+img_out_y  = ort_outs[0]
 
-img_out_y = Image.fromarray(np.uint8((img_out_y[0] * 255.0).clip(0, 255)[0]), mode='L')
+img_out_y  = Image.fromarray(np.uint8((img_out_y[0] * 255.0).clip(0, 255)[0]), mode='L')
 
 # get the output image follow post-processing step from PyTorch implementation
 final_img = Image.merge(
